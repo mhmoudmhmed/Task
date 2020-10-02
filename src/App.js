@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './Components/Header/Header';
+import Sidebar from './Components/App Body/Sidebar/Sidebar';
+import Feed from './Components/App Body/Feed/Feed';
+import Widgets from './Components/App Body/Widget/Widgets';
+import Login from './Components/Login/Login';
+import { useStateValue } from './ContextProvider/StateProvider';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import "./App.css"
+
+const App = () => {
+
+  const [ { user }, dispatch ] = useStateValue();
+
+  return(
+
+    <div className="app">
+      
+      { !user ? <Login /> : (
+        <>
+          {/* header */}
+          <Header />
+
+          <div className="app_body">
+            {/* Sidebar */}
+            <Sidebar />
+
+            {/* Feed */}
+            <Feed />
+            {/* Widget */}
+            <Widgets />
+          </div>
+        </>
+      )}
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,15 @@
+.widgets { 
+  margin-top: 50px;
+  margin-left: 30px;
+}
+@media(max-width:768px) and (min-width:426px) {
+  .widgets { 
+    margin-left: 20px;
+    display: block;
+  }
+}
+@media(max-width:425px) {
+  .widgets { 
+    display: none;
+  }
+}

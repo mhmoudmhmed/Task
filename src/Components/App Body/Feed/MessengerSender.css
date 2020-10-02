@@ -1,0 +1,134 @@
+.MessengerSender {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 5px 7px -7px rgba(0,0,0,0.75);
+}
+.MessengerSender_top {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eff2f5;
+  padding: 15px;
+}
+.MessengerSender_top > form {
+  display: flex;
+  flex: 1;
+  margin: 10px 10px;
+}
+
+.MessengerSender_top > form > input {
+  padding: 5px 20px;
+  margin: 0px 10px;
+  border-radius: 999px;
+  outline-width: 0;
+  border: none;
+  background-color: #eff2f5;
+}
+.MessengerSender_top > form > .hidden_button {display: none;}
+.MessengerSender_bottom {
+  display: flex;
+  justify-content: space-evenly;
+}
+.MessengerSender_option {
+  display: flex;
+  align-items: center;
+  color: gray;
+  margin: 5px;
+  padding: 1px 10px;
+}
+.MessengerSender_option:hover {
+  background-color: #eff2f5;
+  border-radius: 20px;
+}
+.MessengerSender_option > h4 {
+  font-size: medium;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* media query */
+@media(max-width:1440px) and (min-width:1025px) {
+  .MessengerSender_top > form > input {
+    padding: 12px 20px;
+  }
+}
+@media(max-width:768px) and (min-width:426px) {
+  .MessengerSender_top > form  {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 10px;
+  }
+  .MessengerSender_top > form > input {
+    padding: 10px 20px;
+    margin: 5px 10px;
+  }
+  .MessengerSender_option > h4 {
+    font-size: small;
+  }
+  .MuiSvgIcon-root {
+    font-size: small !important;
+  }
+}
+@media(max-width:425px) and (min-width:376px) {
+  .MessengerSender_top > form  {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 10px;
+  }
+  .MessengerSender_top > form > input {
+    padding: 10px 20px;
+    margin: 5px 10px;
+  }
+  .MessengerSender_option > h4 {
+    font-size: small;
+  }
+  .MuiSvgIcon-root {
+    font-size: small !important;
+  }
+}
+@media(max-width:375px) and (min-width:321px) {
+  .MessengerSender_top > form  {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 10px;
+  }
+  .MessengerSender_top > form > input {
+    padding: 10px 5px;
+    margin: 5px 10px;
+  }
+  .MessengerSender_option > h4 {
+    font-size: 11px;
+    margin-left: 0px;
+  }
+  .MuiSvgIcon-root {
+    font-size: small !important;
+  }
+}
+@media(max-width:320px) {
+  .MessengerSender_top {
+    justify-content: center;
+  }
+  .MessengerSender_top > form  {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 10px;
+  }
+  .MessengerSender_top > form > input {
+    padding: 10px 5px;
+    margin: 5px 10px;
+  }
+  .MessengerSender_option > h4 {
+    font-size: 11px;
+    margin-left: 0px;
+  }
+  .MuiSvgIcon-root {
+    font-size: small !important;
+  }
+  .MessengerSender_top > form > .upload_input {
+    width: 90%;
+  }
+}
+/* end */

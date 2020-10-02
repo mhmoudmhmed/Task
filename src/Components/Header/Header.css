@@ -1,0 +1,105 @@
+.header {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+  position: sticky;
+  -webkit-position: sticky;
+  background-color: #fff;
+  z-index: 100;
+  top: 0;
+  box-shadow: 0px 5px 8px -9px rgba(0,0,0,0.75);
+  font-family: 'Roboto', sans-serif;
+}
+
+.header .header_left { 
+  display: flex;
+  justify-content: space-evenly;
+}
+.header .header_left > img {
+  height: 50px;
+  border-radius: 30px;
+}
+.header .header_input {
+  display: flex;
+  height: 52px;
+  align-items: center;
+  background-color: #eff2f5;
+  margin-left: 10px;
+  padding-left: 5px;
+  border-radius: 999px;
+}
+.header .header_input > input {
+  border: none;
+  background-color: transparent;
+  outline-width: 0;
+}
+.header .header_center {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.header_option--active {
+  border-bottom: 4px solid #2e81f4;
+}
+.header_option--active > .MuiSvgIcon-root {
+  color: #2e81f4;
+}
+.header .header_option > .MuiSvgIcon-root {
+  color: gray;
+}
+.header .header_option:hover > .MuiSvgIcon-root {
+  color: #2e81f4;
+}
+.header_option {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  cursor: pointer;
+}
+.header_option:hover {
+  background-color: #eff2f5;
+  border-radius: 10px;
+  align-items: center;
+  padding: 0 30px;
+  border-bottom: none;
+}
+.header_info {
+  display: flex;
+  align-items: center;
+}
+.header_info > h4 {margin-left: 10px;}
+.header_right {display: flex;}
+
+@media(max-width:425px) and (min-width:376px) {
+  .header { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media(max-width:375px) and (min-width:321px) {
+  .header { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .header .header_input, .header .header_left > img {
+    height: 40px;
+  }
+  .header_info > h4 {
+    font-size: small;
+  }
+}
+@media(max-width:320px) {
+  .header { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .header .header_input, .header .header_left > img {
+    height: 40px;
+  }
+  .header_info > h4 {
+    font-size: small;
+  }
+}
